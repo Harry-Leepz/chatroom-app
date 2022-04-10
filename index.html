@@ -29,6 +29,42 @@
           #health & wellbeing
         </button>
       </div>
+
+      <!-- Chat list / window -->
+      <div class="chat-window">
+        <ul class="chat-list list-group"></ul>
+      </div>
+
+      <!-- Chat form -->
+      <form class="new-chat my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Your message:</div>
+          </div>
+          <input type="text" id="message" class="form-control" required />
+          <div class="input-group-append">
+            <input
+              type="submit"
+              class="btn btn-secondary"
+              value="Send Message"
+            />
+          </div>
+        </div>
+      </form>
+
+      <!-- Update user name form -->
+      <form class="new-name my-3">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <div class="input-group-text">Update name:</div>
+          </div>
+          <input type="text" id="name" class="form-control" required />
+          <div class="input-group-append">
+            <input type="submit" class="btn btn-success" value="Update" />
+          </div>
+        </div>
+      </form>
+      <div class="update-msg"></div>
     </div>
 
     <script src="assets/scripts/chat.js"></script>
