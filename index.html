@@ -66,7 +66,23 @@
       </form>
       <div class="update-msg"></div>
     </div>
-
+    <!-- Firebase Initialization -->
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <script>
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const config = {
+        apiKey: "AIzaSyC9XvKiTODezwDqI29FcCXbfXeoOVoTiDc",
+        authDomain: "fir-tutorial-6a049.firebaseapp.com",
+        projectId: "fir-tutorial-6a049",
+        storageBucket: "fir-tutorial-6a049.appspot.com",
+        messagingSenderId: "951884330286",
+        appId: "1:951884330286:web:b2803a8ec2c5cfb0fff6bf",
+        measurementId: "G-7CB1DDJ5NG",
+      };
+      firebase.initializeApp(config);
+      const db = firebase.firestore();
+    </script>
     <script src="assets/scripts/chat.js"></script>
     <script src="assets/scripts/ui.js"></script>
     <script src="assets/scripts/app.js"></script>
