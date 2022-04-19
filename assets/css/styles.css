@@ -10,9 +10,19 @@ body {
 }
 
 .username {
-  color: blueviolet;
+  font-size: 0.9rem;
+  font-style: italic;
+  font-weight: bold;
+  color: rgb(248, 0, 54);
 }
 
 .message {
   color: black;
+  font-size: 0.9rem;
+  font-weight: bold;
+}
+
+.time {
+  font-size: 0.7rem;
+  color: #999;
 }
