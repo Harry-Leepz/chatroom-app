@@ -57,4 +57,11 @@ chatroom.getChats((data) => {
   console.log(data);
 });
 
-chatroom.updateChatroom("gaming");
+setTimeout(() => {
+  chatroom.updateChatroom("gaming");
+  chatroom.updateUsername("Luigi");
+  chatroom.getChats((data) => {
+    console.log(data);
+  });
+  chatroom.addChat("Aloha");
+}, 3000);
