@@ -33,6 +33,11 @@ class Chatroom {
         });
       });
   }
+
+  // currently a placeholder to store and retrieve username from local storage
+  updateUsername(username) {
+    this.username = username;
+  }
 }
 
 const chatroom = new Chatroom("general", "harry");
