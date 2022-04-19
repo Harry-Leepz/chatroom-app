@@ -8,3 +8,11 @@ body {
 .container {
   max-width: 600px;
 }
+
+.username {
+  color: blueviolet;
+}
+
+.message {
+  color: black;
+}
