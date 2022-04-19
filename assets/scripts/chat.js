@@ -3,6 +3,7 @@ class Chatroom {
     this.room = room;
     this.username = username;
     this.chats = db.collection("chats");
+    this.unsub;
   }
 
   async addChat(message) {
@@ -21,7 +22,7 @@ class Chatroom {
   }
   // real time event listener to check for updates
   getChats(callback) {
-    this.chats
+    this.unsub = this.chats
       .where("room", "==", this.room)
       .orderBy("created_at")
       .onSnapshot((snapshot) => {
@@ -38,6 +39,16 @@ class Chatroom {
   updateUsername(username) {
     this.username = username;
   }
+
+  // update the chatroom
+  updateChatroom(room) {
+    this.room = room;
+    // check to see if unsub has a value, if not run the function
+    // and un-subscribe from listening to changes taking place in the old chat room
+    if (this.unsub) {
+      this.unsub();
+    }
+  }
 }
 
 const chatroom = new Chatroom("general", "harry");
@@ -45,3 +56,5 @@ const chatroom = new Chatroom("general", "harry");
 chatroom.getChats((data) => {
   console.log(data);
 });
+
+chatroom.updateChatroom("gaming");
