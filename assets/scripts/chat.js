@@ -51,12 +51,8 @@ class Chatroom {
   }
 }
 
-const chatroom = new Chatroom("general", "harry");
-
-chatroom.getChats((data) => {
-  console.log(data);
-});
-
+/*
+// Test function to test functionality of updating the chatroom and username
 setTimeout(() => {
   chatroom.updateChatroom("gaming");
   chatroom.updateUsername("Luigi");
@@ -65,3 +61,4 @@ setTimeout(() => {
   });
   chatroom.addChat("Aloha");
 }, 3000);
+*/
